@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Company from "./container/Company";
+import Header from "./container/Header";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Header />
+      <Company />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
