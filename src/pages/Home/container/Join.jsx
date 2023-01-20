@@ -30,7 +30,10 @@ const Join = () => {
 export default Join;
 
 const Wrapper = styled.div`
-  /* overflow: hidden; */
+  max-width: 1400px;
+  height: 500px;
+  margin: 89px auto;
+  /* overflow-x: hidden; */
   .container {
     display: flex;
     justify-content: space-between;

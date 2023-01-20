@@ -1,8 +1,10 @@
 import React from "react";
 import Community from "./container/Community";
 import Company from "./container/Company";
+import Contact from "../../components/Contact";
 import Header from "./container/Header";
 import Join from "./container/Join";
+import LearnMore from "./container/LearnMore";
 import Progress from "./container/Progress";
 
 const Home = () => {
@@ -13,6 +15,8 @@ const Home = () => {
       <Progress />
       <Community />
       <Join />
+      {/* <LearnMore /> */}
+      <Contact />
     </div>
   );
 };

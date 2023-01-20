@@ -30,7 +30,7 @@ const Wrapper = styled.section`
   max-width: 1128px;
   margin: auto;
   .container {
-    margin: 24px;
+    margin-top: 124px;
     display: flex;
     flex-direction: column;
     align-items: center;

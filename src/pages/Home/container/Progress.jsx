@@ -38,6 +38,7 @@ const Progress = () => {
 export default Progress;
 
 const Wrapper = styled.div`
+overflow: hidden;
   max-width: 1140px;
   margin: auto;
   .container {

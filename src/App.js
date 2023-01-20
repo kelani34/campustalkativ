@@ -1,15 +1,22 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { Home } from "./pages";
+import { Community, Home } from "./pages";
 import { GlobalStyle } from "./styles/GlobalStyle";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Navbar>
-        <Home />
-      </Navbar>
+      <Router>
+        <Navbar>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/join-us" element={<Community />} />
+          </Routes>
+        </Navbar>
+      </Router>
+      <Footer />
     </>
   );
 }
