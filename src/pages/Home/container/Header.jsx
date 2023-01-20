@@ -60,6 +60,7 @@ const Wrapper = styled.section`
       @media screen and (max-width: 650px) {
         flex-direction: column;
         margin-bottom: 64px;
+        gap: 8px;
       }
     }
   }

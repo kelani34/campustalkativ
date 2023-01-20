@@ -69,6 +69,7 @@ const Wrapper = styled.div`
       justify-content: center;
       gap: 48px;
       margin: 38px 0;
+
       .sm {
         @media screen and (max-width: 650px) {
           display: none;
@@ -78,6 +79,9 @@ const Wrapper = styled.div`
         @media screen and (max-width: 650px) {
           width: 48px;
         }
+      }
+      @media screen and (max-width: 650px) {
+        gap: 38px;
       }
     }
   }
