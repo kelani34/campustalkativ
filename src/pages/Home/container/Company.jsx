@@ -12,6 +12,14 @@ const Company = () => {
           and partnership of these organisations, who share our zeal to continue
           to develop and build the youths of the future
         </p>
+        <div className="cta__partnership-containers">
+          <img src={company} alt="company" />
+          <img src={company} alt="company" />
+          <img src={company} alt="company" />
+          <img src={company} alt="company" />
+          <img src={company} alt="company" className="sm" />
+          <img src={company} alt="company" className="sm" />
+        </div>
       </div>
     </Wrapper>
   );
@@ -53,6 +61,23 @@ const Wrapper = styled.div`
       @media screen and (max-width: 650px) {
         font-size: 14px;
         line-height: 22px;
+      }
+    }
+    .cta__partnership-containers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+      margin: 38px 0;
+      .sm {
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
+      }
+      img {
+        @media screen and (max-width: 650px) {
+          width: 48px;
+        }
       }
     }
   }

@@ -22,4 +22,7 @@ const StyledButton = styled.button`
   font-size: 16px;
   line-height: 160%;
   color: #050300;
+  &:hover {
+    transform: scale(0.8);
+  }
 `;
