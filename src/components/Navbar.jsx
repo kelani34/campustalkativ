@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import logo from "../assets/app_logo.png";
 import logo169 from "../assets/logo169.png";
 import {
   AiFillInstagram,
