@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import community from "../../assets/community.png";
 import Contact from "../../components/Contact";
-
+import { RiWhatsappFill } from "react-icons/ri";
+import { BsTelegram } from "react-icons/bs";
 const Community = () => {
   return (
     <Wrapper>
@@ -16,11 +17,18 @@ const Community = () => {
           and Telegram channel. You can join either of them and enjoy the same
           benefits.
         </p>
+        <div className="join-btns">
+          <button>
+            <RiWhatsappFill />
+            CT Whatsapp community
+          </button>
+          <button>
+            <BsTelegram />
+            CT Telegram channel
+          </button>
+        </div>
       </div>
-      <div className="join-btns">
-        <button>CT Whatsapp community</button>
-        <button>CT Telegram channel</button>
-      </div>
+
       <Contact />
     </Wrapper>
   );
@@ -32,24 +40,26 @@ const Wrapper = styled.div`
   max-width: 1240px;
   margin: auto;
   .containerr {
-    margin: 20px;
+    margin: 113px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 650px) {
+      margin: 43px 20px;
+    }
     h1 {
       font-family: "Sora";
       font-style: normal;
       font-weight: 700;
       font-size: 48px;
       line-height: 140%;
-      /* or 67px */
-
       text-align: center;
-
-      /* Grey/10 */
-
       color: #050300;
+      @media screen and (max-width: 650px) {
+        font-size: 24px;
+        line-height: 140%;
+      }
     }
     p {
       font-family: "Raleway";
@@ -60,8 +70,36 @@ const Wrapper = styled.div`
       text-align: center;
       color: #3f392c;
       max-width: 861px;
+      @media screen and (max-width: 650px) {
+        font-size: 14px;
+        line-height: 160%;
+      }
     }
     .join-btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 43px;
+      button {
+        background: rgba(255, 230, 192, 0.4);
+        border: 1px solid #ffe6c0;
+        border-radius: 30px;
+        padding: 18px 29px;
+        display: flex;
+        gap: 17px;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        color: #191102;
+        @media screen and (max-width: 650px) {
+          font-size: 14px;
+          line-height: 160%;
+        }
+      }
     }
 
     .img {
