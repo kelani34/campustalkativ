@@ -1,9 +1,14 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
 const Community = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
       <div className="container">
         <div className="content">
           <h2>
@@ -26,7 +31,7 @@ const Community = () => {
 
 export default Community;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   max-width: 1128px;
   margin: auto;
   .container {

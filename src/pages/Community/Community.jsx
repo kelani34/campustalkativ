@@ -4,9 +4,10 @@ import community from "../../assets/community.png";
 import Contact from "../../components/Contact";
 import { RiWhatsappFill } from "react-icons/ri";
 import { BsTelegram } from "react-icons/bs";
+import { motion } from "framer-motion";
 const Community = () => {
   return (
-    <Wrapper>
+    <Wrapper exit={{ opacity: 0 }}>
       <div className="containerr">
         <div>
           <img className="img" src={community} alt="Community" />
@@ -18,14 +19,18 @@ const Community = () => {
           benefits.
         </p>
         <div className="join-btns">
-          <button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
             <RiWhatsappFill />
             CT Whatsapp community
-          </button>
-          <button>
+          </motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <BsTelegram />
             CT Telegram channel
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -36,7 +41,7 @@ const Community = () => {
 
 export default Community;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   max-width: 1240px;
   margin: auto;
   .containerr {
@@ -89,6 +94,7 @@ const Wrapper = styled.div`
         padding: 18px 29px;
         display: flex;
         gap: 17px;
+        align-items: center;
         font-family: "Raleway";
         font-style: normal;
         font-weight: 500;

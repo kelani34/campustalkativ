@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/app_logo.png";
 const Footer = () => {
   return (
     <Wrapper>
       <div className="container">
-        <img src={logo} alt="logo" />
+        <Link to='/'>
+          <img src={logo} alt="logo" />
+        </Link>
 
         <span>&copy; 2023. All rights reserved.</span>
       </div>

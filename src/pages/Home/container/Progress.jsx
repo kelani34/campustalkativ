@@ -7,7 +7,7 @@ import line from "../../../assets/line.png";
 import impact from "../../../assets/impact.png";
 const Progress = () => {
   return (
-    <Wrapper>
+    <Wrapper id="growth">
       <div className="container">
         <div className="content">
           <div>

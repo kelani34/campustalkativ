@@ -10,18 +10,23 @@ import {
 import { FaTiktok } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import Button from "../shared/Button";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   return (
     <>
       <Wrapper>
         <div className="container">
-          <div className="cta__navbar-img-container__large">
-            <img src={logo} alt="logo" />
-          </div>
-          <div className="cta__navbar-img-container__small">
-            <img src={logo169} alt="logo" />
-          </div>
+          <Link to="/">
+            <div className="cta__navbar-img-container__large">
+              <img src={logo} alt="logo" />
+            </div>
+          </Link>
+          <Link to="/">
+            <div className="cta__navbar-img-container__small">
+              <img src={logo169} alt="logo" />
+            </div>
+          </Link>
           <div className="cta__navbar-items-container">
             <IconContext.Provider value={{ color: "#666056", size: "18px" }}>
               <div className="cta__navbar-items-icons">
@@ -32,7 +37,9 @@ const Navbar = (props) => {
               </div>
             </IconContext.Provider>
             <div className="cta__navbar-items-btn">
-              <Button text="Join community" />
+              <Link to="/join-us">
+                <Button text="Join community" />
+              </Link>
             </div>
           </div>
         </div>

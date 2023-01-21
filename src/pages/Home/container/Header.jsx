@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../../shared/Button";
 import home from "../../../assets/home-img.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <Wrapper>
@@ -12,8 +13,12 @@ const Header = () => {
             Africa
           </h1>
           <div className="cta__header-text_btns">
-            <Button text="Join community" />
-            <Button outline text="see our growth" />
+            <Link to="/join-us">
+              <Button text="Join community" />
+            </Link>
+            <a href="#growth">
+              <Button outline text="see our growth" />
+            </a>
           </div>
         </div>
         <div className="cta__header-img">

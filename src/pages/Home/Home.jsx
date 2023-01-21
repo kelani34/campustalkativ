@@ -6,10 +6,13 @@ import Header from "./container/Header";
 import Join from "./container/Join";
 import LearnMore from "./container/LearnMore";
 import Progress from "./container/Progress";
+import { motion } from "framer-motion";
+import InitialTransition from "../../transitions/InitialTransitions";
 
-const Home = () => {
+
+const Home = ({ isFirstMount }) => {
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <Header />
       <Company />
       <Progress />
@@ -17,7 +20,7 @@ const Home = () => {
       <Join />
       {/* <LearnMore /> */}
       <Contact />
-    </div>
+    </motion.div>
   );
 };
 

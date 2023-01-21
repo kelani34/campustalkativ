@@ -1,13 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 const Button = ({ outline, text }) => {
-  return <StyledButton outline={outline}>{text}</StyledButton>;
+  return (
+    <StyledButton
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      outline={outline}
+    >
+      {text}
+    </StyledButton>
+  );
 };
 
 export default Button;
 
-const StyledButton = styled.button`
+const StyledButton = styled(motion.button)`
   border: none;
   outline: none;
   background: ${(props) => (props.outline ? "none" : "#f2aa3c")};
@@ -22,7 +31,7 @@ const StyledButton = styled.button`
   font-size: 16px;
   line-height: 160%;
   color: #050300;
-  &:hover {
+  /* &:hover {
     transform: scale(0.8);
-  }
+  } */
 `;
