@@ -107,6 +107,9 @@ const Wrapper = styled.div`
       width: 100%;
       margin-bottom: -100px;
       margin-top: -40px;
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
     }
   }
 `;
