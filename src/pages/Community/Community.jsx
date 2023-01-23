@@ -19,20 +19,24 @@ const Community = () => {
           benefits.
         </p>
         <div className="join-btns">
-          <a href="https://t.me/+U8J2O3guPCkxMDI8">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <RiWhatsappFill />
+            CT Whatsapp community
+          </motion.button>
+
+          <a href="https://t.me/+U8J2O3guPCkxMDI8" target="_blank" rel="noreferrer">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <RiWhatsappFill />
-              CT Whatsapp community
+              <BsTelegram />
+              CT Telegram channel
             </motion.button>
           </a>
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <BsTelegram />
-            CT Telegram channel
-          </motion.button>
         </div>
       </div>
 

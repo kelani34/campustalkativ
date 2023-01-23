@@ -13,7 +13,7 @@ const Contact = () => {
     <Wrapper>
       <div className="container">
         <h2>
-          Say hello at <span>talk@campustalktive.com</span>
+          Say hello at <span>campustalkative@gmail.com</span>
         </h2>
         <img src={contact} alt="contact" />
         <div className="btns">
