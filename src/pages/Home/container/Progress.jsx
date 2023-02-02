@@ -38,7 +38,7 @@ const Progress = () => {
 export default Progress;
 
 const Wrapper = styled.div`
-overflow: hidden;
+  overflow: hidden;
   max-width: 1140px;
   margin: auto;
   .container {
@@ -116,6 +116,9 @@ overflow: hidden;
     margin-top: 25px;
     /* width: 100%; */
     /* width: 771px; */
+    @media screen and (max-width: 1024px) {
+      margin-left: 0px;
+    }
     @media screen and (max-width: 650px) {
       display: none;
     }

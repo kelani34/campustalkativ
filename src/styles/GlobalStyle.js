@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Inter', sans-serif;
-        /* overflow: hidden; */
+        overflow-x: hidden;
         height: 100vh;
 
         background: #FFF7EC;

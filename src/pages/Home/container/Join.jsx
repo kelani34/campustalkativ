@@ -39,7 +39,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
     position: relative;
     gap: 148px;
-
+    @media screen and (max-width: 1024px) {
+      justify-content: flex-end;
+    }
     @media screen and (max-width: 650px) {
       gap: 0;
       justify-content: flex-end;
@@ -76,6 +78,9 @@ const Wrapper = styled.div`
     .img {
       position: absolute;
       left: 450px;
+      @media screen and (max-width: 1024px) {
+        left: 20px;
+      }
       @media screen and (max-width: 650px) {
         display: none;
       }
@@ -85,6 +90,10 @@ const Wrapper = styled.div`
       top: 515px;
       left: 980px;
       width: 282px;
+      @media screen and (max-width: 1024px) {
+        left: 530px;
+        top: 525px;
+      }
       @media screen and (max-width: 650px) {
         display: none;
         position: relative;
@@ -93,11 +102,17 @@ const Wrapper = styled.div`
       }
     }
     .half-img {
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
       @media screen and (max-width: 650px) {
         display: none;
       }
     }
     .full-img {
+      @media screen and (max-width: 1024px) {
+        margin-left: 40px;
+      }
       @media screen and (max-width: 650px) {
         display: none;
       }
