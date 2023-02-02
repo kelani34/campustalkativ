@@ -5,6 +5,7 @@ import Contact from "../../components/Contact";
 import { RiWhatsappFill } from "react-icons/ri";
 import { BsTelegram } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { AiOutlineSlack } from "react-icons/ai";
 const Community = () => {
   return (
     <Wrapper exit={{ opacity: 0 }}>
@@ -19,16 +20,25 @@ const Community = () => {
           benefits.
         </p>
         <div className="join-btns">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <a
+            href="https://join.slack.com/t/campustalkative/shared_invite/zt-1onngpe3l-LFu1TtODxkyjQPwnW773qQ"
+            target="_blank"
+            rel="noreferrer"
           >
-            <RiWhatsappFill />
-            CT Whatsapp community
-          </motion.button>
-
-          <a href="https://t.me/+U8J2O3guPCkxMDI8" target="_blank" rel="noreferrer">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <AiOutlineSlack />
+              CT Slack community
+            </motion.button>
+          </a>
+          <a
+            href="https://t.me/+U8J2O3guPCkxMDI8"
+            target="_blank"
+            rel="noreferrer"
+          >
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
