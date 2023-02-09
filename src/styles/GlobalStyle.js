@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
     html {
-        height: 100%;
+        /* height: 100%; */
         scroll-behavior: smooth;
     }
     *, *::after, *::before {
@@ -31,5 +31,8 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         cursor: pointer;
+    }
+    #root{
+        height: 60%;
     }
 `;

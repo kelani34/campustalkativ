@@ -12,6 +12,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/join-us" element={<Community />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </AnimatePresence>
       </Navbar>

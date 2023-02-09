@@ -1,27 +1,37 @@
 import React from "react";
 import styled from "styled-components";
-import largeImage from "../../../assets/large-image.png";
-import halfImage from "../../../assets/half-image.png";
-import lShape from "../../../assets/l-shape.png";
-import slShape from "../../../assets/sl-shape.png";
-import smallImage from "../../../assets/small-image.png";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import slide2 from "../../../assets/slide2.jpg";
+import slide3 from "../../../assets/slide3.jpg";
+import slide4 from "../../../assets/slide4.jpg";
+import slide5 from "../../../assets/slide5.jpg";
+import slide6 from "../../../assets/slide6.jpg";
+import slide7 from "../../../assets/slide7.jpg";
 import Button from "../../../shared/Button";
+import Slider from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
 
 const Join = () => {
+  const slides = [
+    { img: slide2, title: "Second item", description: "Lorem ipsum" },
+    { img: slide3, title: "Second item", description: "Lorem ipsum" },
+    { img: slide4, title: "Second item", description: "Lorem ipsum" },
+    { img: slide5, title: "Second item", description: "Lorem ipsum" },
+    { img: slide6, title: "Second item", description: "Lorem ipsum" },
+    { img: slide7, title: "Second item", description: "Lorem ipsum" },
+  ];
   return (
     <Wrapper>
-      <div className="container">
-        <img src={halfImage} alt="" className="half-img" />
-        <img src={largeImage} alt="" className="full-img" />
-        <img src={slShape} alt="" className="sl-img" />{" "}
-        <img src={smallImage} alt="" className="small-img" />
-        <img src={lShape} alt="" className="img" />
-        <div className="btn">
-          <Button text="Be a part of this community" />
-        </div>
-        <div className="sm-btn">
-          <Button text="Be a part of this community" />
-        </div>
+      <Slider autoplay={5} infinite={true}>
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <img src={slide.img} />
+          </div>
+        ))}
+      </Slider>
+      <div className="btn">
+        <Button text="Be a part of this community" />
       </div>
     </Wrapper>
   );
@@ -31,91 +41,30 @@ export default Join;
 
 const Wrapper = styled.div`
   max-width: 1400px;
-  height: 500px;
+  /* height: 500px; */
   margin: 89px auto;
-  /* overflow-x: hidden; */
-  .container {
+  display: flex;
+  flex-direction: column;
+  .btn {
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    gap: 148px;
-    @media screen and (max-width: 1024px) {
-      justify-content: flex-end;
+    justify-content: center;
+    margin-top: 90px;
+  }
+  .slider {
+    height: 800px;
+  }
+  @media screen and (max-width: 768px) {
+    .slider {
+      height: 600px;
     }
-    @media screen and (max-width: 650px) {
-      gap: 0;
-      justify-content: flex-end;
-      flex-direction: column;
-      margin-left: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    .slider {
+      height: 400px;
     }
-    .sm-btn {
-      display: none;
-      @media screen and (max-width: 650px) {
-        display: flex;
-        justify-content: center;
-        margin-top: 64px;
-        margin-left: 60px;
-        margin-right: 20px;
-      }
-    }
-    .sl-img {
-      display: none;
-      @media screen and (max-width: 650px) {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    }
-    .small-img {
-      display: none;
-      @media screen and (max-width: 650px) {
-        display: block;
-        height: 456px;
-        margin-left: 64px;
-      }
-    }
-    .img {
-      position: absolute;
-      left: 450px;
-      @media screen and (max-width: 1024px) {
-        left: 20px;
-      }
-      @media screen and (max-width: 650px) {
-        display: none;
-      }
-    }
-    .btn {
-      position: absolute;
-      top: 515px;
-      left: 980px;
-      width: 282px;
-      @media screen and (max-width: 1024px) {
-        left: 530px;
-        top: 525px;
-      }
-      @media screen and (max-width: 650px) {
-        display: none;
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-    }
-    .half-img {
-      @media screen and (max-width: 1024px) {
-        display: none;
-      }
-      @media screen and (max-width: 650px) {
-        display: none;
-      }
-    }
-    .full-img {
-      @media screen and (max-width: 1024px) {
-        margin-left: 40px;
-      }
-      @media screen and (max-width: 650px) {
-        display: none;
-      }
-    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
   }
 `;

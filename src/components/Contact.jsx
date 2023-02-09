@@ -37,7 +37,7 @@ const Contact = () => {
 export default Contact;
 
 const Wrapper = styled.div`
-  margin: 189px 20px;
+  margin: 139px 20px;
   @media screen and (max-width: 650px) {
     margin: 18px 20px;
   }
