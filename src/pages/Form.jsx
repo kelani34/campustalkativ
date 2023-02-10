@@ -17,7 +17,7 @@ const Form = () => {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
-    e.PreventDefault();
+    e.preventDefault();
     console.log(e);
     navigate("/join/community");
   }
@@ -38,7 +38,7 @@ const Form = () => {
           </div>
         </div>
         <div>
-          <form onSubmit={handleSubmit} id="form">
+          <form onSubmit={(e) => handleSubmit(e)} id="form">
             <div className="flex w-full gap-5 ">
               <div className="w-[50%]">
                 <input

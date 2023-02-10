@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import community from "../../assets/community.png";
 import Contact from "../../components/Contact";
-import { RiWhatsappFill } from "react-icons/ri";
 import { BsTelegram } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { AiOutlineSlack } from "react-icons/ai";
