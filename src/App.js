@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageNotFound from "./pages/PageNotFound";
+import Form from "./pages/Form";
 
 function App() {
   const location = useLocation();
@@ -21,15 +22,15 @@ function App() {
     <>
       <GlobalStyle />
 
-      <Navbar>
-        <AnimatePresence exitBeforeEnter>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/join-us" element={<Community />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </AnimatePresence>
-      </Navbar>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/join-us" element={<Form />} />
+          <Route path="/join/community" element={<Community />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </AnimatePresence>
+
       <Footer />
     </>
   );

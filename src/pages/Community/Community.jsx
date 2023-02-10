@@ -6,52 +6,55 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { BsTelegram } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { AiOutlineSlack } from "react-icons/ai";
+import Navbar from "../../components/Navbar";
 const Community = () => {
   return (
-    <Wrapper exit={{ opacity: 0 }}>
-      <div className="containerr">
-        <div>
-          <img className="img" src={community} alt="Community" />
-        </div>
-        <h1>Join our community with ease</h1>
-        <p>
-          Our community exist on any of these two platforms. Whatsapp community
-          and Telegram channel. You can join either of them and enjoy the same
-          benefits.
-        </p>
-        <div className="join-btns">
-          <a
-            href="https://join.slack.com/t/campustalkative/shared_invite/zt-1onngpe3l-LFu1TtODxkyjQPwnW773qQ"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    <Navbar>
+      <Wrapper exit={{ opacity: 0 }}>
+        <div className="containerr">
+          <div>
+            <img className="img" src={community} alt="Community" />
+          </div>
+          <h1>Join our community with ease</h1>
+          <p>
+            Our community exist on any of these two platforms. Whatsapp
+            community and Telegram channel. You can join either of them and
+            enjoy the same benefits.
+          </p>
+          <div className="join-btns">
+            <a
+              href="https://join.slack.com/t/campustalkative/shared_invite/zt-1onngpe3l-LFu1TtODxkyjQPwnW773qQ"
+              target="_blank"
+              rel="noreferrer"
             >
-              <AiOutlineSlack />
-              CT Slack community
-            </motion.button>
-          </a>
-          <a
-            href="https://t.me/+U8J2O3guPCkxMDI8"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <AiOutlineSlack />
+                CT Slack community
+              </motion.button>
+            </a>
+            <a
+              href="https://t.me/+U8J2O3guPCkxMDI8"
+              target="_blank"
+              rel="noreferrer"
             >
-              <BsTelegram />
-              CT Telegram channel
-            </motion.button>
-          </a>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <BsTelegram />
+                CT Telegram channel
+              </motion.button>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <Contact />
-    </Wrapper>
+        <Contact />
+      </Wrapper>
+    </Navbar>
   );
 };
 

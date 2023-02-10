@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="container">
-        <Link to='/'>
+        <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
 
@@ -25,7 +25,8 @@ const Wrapper = styled.footer`
     align-items: center;
     justify-content: center;
     gap: 22px;
-    margin: 40px;
+    /* margin: 40px; */
+    margin: 40px auto;
     span {
       font-family: "Raleway";
       font-style: normal;

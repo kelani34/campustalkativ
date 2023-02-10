@@ -11,6 +11,7 @@ import slide7 from "../../../assets/slide7.jpg";
 import Button from "../../../shared/Button";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
+import { Link } from "react-router-dom";
 
 const Join = () => {
   const slides = [
@@ -31,7 +32,9 @@ const Join = () => {
         ))}
       </Slider>
       <div className="btn">
-        <Button text="Be a part of this community" />
+        <Link to="/join-us">
+          <Button text="Be a part of this community" />
+        </Link>
       </div>
     </Wrapper>
   );

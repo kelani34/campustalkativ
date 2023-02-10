@@ -2,28 +2,31 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Navbar from "../components/Navbar";
 import Button from "../shared/Button";
 
 const PageNotFound = () => {
   return (
-    <Wrapper exit={{ opacity: 0 }}>
-      {" "}
-      <p class="zoom-area">
-        <b>Oops!</b> Looks Like the Page you're looking for isn't found.{" "}
-      </p>
-      <section class="error-container">
-        <span>4</span>
-        <span>
-          <span class="screen-reader-text">0</span>
-        </span>
-        <span>4</span>
-      </section>
-      <div class="link-container">
-        <Link to="/join-us">
-          <Button text="Home" />
-        </Link>
-      </div>
-    </Wrapper>
+    <Navbar>
+      <Wrapper exit={{ opacity: 0 }}>
+        {" "}
+        <p class="zoom-area">
+          <b>Oops!</b> Looks Like the Page you're looking for isn't found.{" "}
+        </p>
+        <section class="error-container">
+          <span>4</span>
+          <span>
+            <span class="screen-reader-text">0</span>
+          </span>
+          <span>4</span>
+        </section>
+        <div class="link-container">
+          <Link to="/">
+            <Button text="Home" />
+          </Link>
+        </div>
+      </Wrapper>
+    </Navbar>
   );
 };
 
