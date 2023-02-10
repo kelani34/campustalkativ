@@ -1,11 +1,27 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import Button from "../shared/Button";
 import { country_list } from "../constants/data";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [description, setDescription] = useState("");
+  const [path, setPath] = useState("");
+  const [outreach, setOutreach] = useState("");
+  const navigate = useNavigate();
+
+  function handleSubmit(e) {
+    e.PreventDefault();
+    console.log(e);
+    navigate("/join/community");
+  }
+
   return (
     <Wrapper exit={{ opacity: 0 }}>
       <div className="container flex flex-col items-center max-w-[900px] m-auto">
@@ -22,71 +38,99 @@ const Form = () => {
           </div>
         </div>
         <div>
-          <form>
+          <form onSubmit={handleSubmit} id="form">
             <div className="flex w-full gap-5 ">
               <div className="w-[50%]">
                 <input
+                  type="text"
                   className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
                   placeholder="First Name"
                   id="firstname"
+                  value={firstname}
+                  onChange={(e) => setFirstname(e.target.value)}
+                  required
                 />
               </div>
               <div className="w-[50%]">
                 <input
+                  type="text"
                   className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
                   placeholder="Last Name"
                   id="lastname"
+                  value={lastname}
+                  onChange={(e) => setLastname(e.target.value)}
+                  required
                 />
               </div>
             </div>
             <div>
               <input
+                type="email"
                 className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
                 placeholder="Email Address"
                 id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <div>
-              <select className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none ">
+              <select
+                className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+              >
                 <option default hidden>
                   Select Country
                 </option>
                 {country_list.map((country) => (
-                  <option key={country}>{country}</option>
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
                 ))}
               </select>
             </div>
             <div>
               <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 placeholder="A short description about you"
                 className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none resize-none"
                 id="firstname"
               />
             </div>
             <div>
-              <select className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none ">
+              <select
+                value={path}
+                onChange={(e) => setPath(e.target.value)}
+                className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
+              >
                 <option default hidden>
                   What path would you like to join?
                 </option>
-                <option>Tech</option>
-                <option>Entertainment</option>
-                <option>Corpporate</option>
-                <option>Entrepreneurship</option>
+                <option value="tech">Tech</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="corporate">Corporate</option>
+                <option value="entrepreneurship">Entrepreneurship</option>
               </select>
             </div>
             <div>
-              <select className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none ">
+              <select
+                value={outreach}
+                onChange={(e) => setOutreach(e.target.value)}
+                className="mb-4 w-full box-border border-2 border-solid border-[#CDD2D5] rounded p-2 outline-none "
+              >
                 <option default hidden>
                   How did you hear about us?
                 </option>
-                <option>Twitter</option>
-                <option>Instagram</option>
-                <option>facebook</option>
-                <option>Youtube</option>
+                <option value="twitter">Twitter</option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="youtube">Youtube</option>
               </select>
             </div>
             <div className="flex justify-center">
-              <Button text="Submit Application" />
+              <Button text="Submit Application" form="form" />
             </div>
           </form>
         </div>
