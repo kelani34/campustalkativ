@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import company from "../../../assets/company.svg";
+import company from "../../../assets/company.png";
 const Company = () => {
   return (
     <Wrapper>
@@ -13,12 +13,14 @@ const Company = () => {
           to develop and build the youths of the future
         </p>
         <div className="cta__partnership-containers">
-          <img src={company} alt="company" />
-          <img src={company} alt="company" />
+          <div className="max-w-[150px]">
+            <img src={company} alt="company" />
+          </div>
+          {/* <img src={company} alt="company" />
           <img src={company} alt="company" />
           <img src={company} alt="company" />
           <img src={company} alt="company" className="sm" />
-          <img src={company} alt="company" className="sm" />
+          <img src={company} alt="company" className="sm" /> */}
         </div>
       </div>
     </Wrapper>
@@ -34,7 +36,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 24px;
+    /* margin: 24px; */
     h2 {
       font-family: "Sora";
       font-style: normal;

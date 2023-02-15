@@ -20,10 +20,34 @@ const Contact = () => {
           <button className="contact">
             <IconContext.Provider value={{ color: "#191102", size: "20px" }}>
               <div className="cta__navbar-items-icons">
-                <AiFillInstagram />
-                <AiFillTwitterCircle />
-                <FaTiktok />
-                <AiFillLinkedin />
+                <a
+                  href="https://instagram.com/campustalkative"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillInstagram />
+                </a>
+                <a
+                  href="https://twitter.com/campustalkative"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillTwitterCircle />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@campustalkative?_t=8ZDKhEhZNP3&_r=1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTiktok />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/campustalkative/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillLinkedin />
+                </a>
               </div>
             </IconContext.Provider>
             <span>@campustalkative</span>
@@ -55,7 +79,7 @@ const Wrapper = styled.div`
         color: #f2aa3c;
       }
       @media screen and (max-width: 650px) {
-        font-size: 24px;
+        font-size: 18px;
         line-height: 140%;
       }
     }

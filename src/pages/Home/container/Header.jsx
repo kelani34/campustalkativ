@@ -17,7 +17,7 @@ const Header = () => {
               <Button text="Join community" />
             </Link>
             <a href="#growth">
-              <Button outline text="see our growth" />
+              <Button outline text="See our growth" />
             </a>
           </div>
         </div>

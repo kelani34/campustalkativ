@@ -13,7 +13,7 @@ import Navbar from "../../components/Navbar";
 const Home = ({ isFirstMount }) => {
   return (
     <Navbar>
-      <motion.div exit={{ opacity: 0 }}>
+      <motion.div exit={{ opacity: 0 }} style={{ margin: "10px" }}>
         <Header />
         <Company />
         <Progress />

@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 480px) {
     .slider {
-      height: 400px;
+      height: 300px;
     }
   }
   img {

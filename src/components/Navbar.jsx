@@ -17,15 +17,11 @@ const Navbar = (props) => {
     <>
       <Wrapper>
         <div className="container">
-          <Link to="/">
-            <div className="cta__navbar-img-container__large">
-              <img src={logo} alt="logo" />
-            </div>
+          <Link to="/" className="cta__navbar-img-container__large">
+            <img src={logo} alt="logo" />
           </Link>
-          <Link to="/">
-            <div className="cta__navbar-img-container__small">
-              <img src={logo169} alt="logo" />
-            </div>
+          <Link to="/" className="cta__navbar-img-container__small">
+            <img src={logo169} alt="logo" />
           </Link>
           <div className="cta__navbar-items-container">
             <IconContext.Provider value={{ color: "#666056", size: "18px" }}>
